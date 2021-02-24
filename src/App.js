@@ -1,17 +1,14 @@
-import './App.css';
-import MovieApp from './Components/MovieApp';
-import MovieDetails from './Components/MovieDetails/MovieDetails';
+import "./App.css";
+import MovieApp from "./Components/MovieApp";
+import MovieDetails from "./Components/MovieDetails/MovieDetails";
 import { Route, Switch } from "react-router-dom";
 import PrivateRoute from "./Router/PrivateRoute";
-
 
 function App() {
   return (
     <div className="App">
-      
-      <MovieApp />
-      
-       <Switch>
+      <Switch>
+        <Route exact path="/" component={MovieApp} />
         <Route path="/movie" component={MovieDetails} />
         {/* <PrivateRoute path="/dashbord" component={Home} /> */}
       </Switch>
